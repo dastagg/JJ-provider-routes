@@ -10,26 +10,26 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Main Screen'),
+        title: const Text('Main Screen'),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.of(context).pushNamed(RouteManager.settingsPage);
             },
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.settings),
           ),
           IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.exit_to_app),
+            icon: const Icon(Icons.exit_to_app),
           ),
         ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'Welcome',
               style: TextStyle(fontSize: 24),

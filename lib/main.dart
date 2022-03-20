@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../routes/routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('Building MyApp');
-    return MaterialApp(
+    return const MaterialApp(
       initialRoute: RouteManager.loginPage,
       onGenerateRoute: RouteManager.generateRoute,
     );

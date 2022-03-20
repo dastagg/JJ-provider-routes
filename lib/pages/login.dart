@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
     print('Building Login');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Center(
         child: Column(
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
               child: TextField(
                 keyboardType: TextInputType.text,
                 controller: usernameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Please enter your username'),
               ),
@@ -42,7 +42,7 @@ class _LoginState extends State<Login> {
               onPressed: () {
                 Navigator.of(context).pushNamed(RouteManager.mainPage);
               },
-              child: Text('Submit'),
+              child: const Text('Submit'),
             ),
           ],
         ),

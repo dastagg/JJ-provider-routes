@@ -8,26 +8,26 @@ class Settings extends StatelessWidget {
     print('Building Settings');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: const Text('Settings'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Choose color scheme for AppBar'),
-            SizedBox(
+            const Text('Choose color scheme for AppBar'),
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text('Blue'),
+              child: const Text('Blue'),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 primary: Colors.purple,
               ),
               onPressed: () {},
-              child: Text('Purple'),
+              child: const Text('Purple'),
             ),
           ],
         ),
