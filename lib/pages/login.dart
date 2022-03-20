@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/user.dart';
 import '../routes/routes.dart';
 
 class Login extends StatefulWidget {
@@ -40,6 +43,7 @@ class _LoginState extends State<Login> {
             ),
             ElevatedButton(
               onPressed: () {
+                context.read<User>().username = usernameController.text;
                 Navigator.of(context).pushNamed(RouteManager.mainPage);
               },
               child: const Text('Submit'),
