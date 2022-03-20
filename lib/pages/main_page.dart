@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/user.dart';
 import '../routes/routes.dart';
 
 class MainPage extends StatelessWidget {
@@ -29,11 +32,13 @@ class MainPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'Welcome',
-              style: TextStyle(fontSize: 24),
-            ),
+          children: [
+            Consumer<User>(builder: (context, value, child) {
+              return Text(
+                'Welcome ${value.username}',
+                style: const TextStyle(fontSize: 24),
+              );
+            }),
           ],
         ),
       ),
