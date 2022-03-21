@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../models/settings_data.dart';
 import '../models/user.dart';
 import '../routes/routes.dart';
 
@@ -12,6 +13,7 @@ class MainPage extends StatelessWidget {
     print('Building MainPage');
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: context.watch<SettingsData>().appBarColor,
         automaticallyImplyLeading: false,
         title: const Text('Main Screen'),
         actions: [
